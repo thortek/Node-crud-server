@@ -29,3 +29,10 @@ exports.product_update = (req, res, next) => {
     },
   )
 }
+
+exports.product_delete = (req, res, next) => {
+    Product.findByIdAndRemove(req.params.id, (err) => {
+        if (err) return next(err)
+        res.send('Deleted successfully')
+    })
+}
