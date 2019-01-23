@@ -1,0 +1,29 @@
+{
+  "name": "node-crud-server",
+  "version": "1.0.0",
+  "description": "Simple node server example",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thortek/Node-crud-server.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Thor Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thortek/Node-crud-server/issues"
+  },
+  "homepage": "https://github.com/thortek/Node-crud-server#readme"
+}
