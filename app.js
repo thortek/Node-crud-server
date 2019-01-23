@@ -1,9 +1,21 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+
+// set up the mongoose to Atlas connection
+const dev_db_url = 'mongodb+srv://someuser:abcd1234@freetestcluster-product-opg2q.gcp.mongodb.net/admin'
+const mongoDB = process.env.MONGODB_URI || dev_db_url
+mongoose.connect(mongoDB, {useNewUrlParser: true})
+mongoose.Promise = global.Promise
+const db = mongoose.connection
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const product = require('./routes/product.route')// imports routes for the products
 
 const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use('/products', product)
 
