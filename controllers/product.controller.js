@@ -1,4 +1,4 @@
-const Product = require('../models/product.model')
+const { Product, Pokemon } = require('../models/product.model')
 
 // simple version with no validation or sanitation
 exports.test = (req, res) => {
@@ -16,6 +16,20 @@ exports.product_create = (req, res, next) => {
       return next(err)
     }
     res.send('Product created successfully')
+  })
+}
+
+exports.pokemon_create = (req, res, next) => {
+  let pokemon = new Pokemon({
+    name: req.body.name,
+    url: req.body.url,
+  })
+
+  pokemon.save(function(err) {
+    if (err) {
+      return next(err)
+    }
+    res.send('Pokemon created!')
   })
 }
 

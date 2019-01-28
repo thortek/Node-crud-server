@@ -8,7 +8,9 @@
     "express": "^4.16.4",
     "mongoose": "^5.4.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node-fetch": "^2.3.0"
+  },
   "scripts": {
     "test": "test",
     "start": "node app.js"
