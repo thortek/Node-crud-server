@@ -1,4 +1,5 @@
-const { Product, Pokemon } = require('../models/product.model')
+const Product = require('../models/product.model')
+const Pokemon = require('../models/pokemon.model')
 
 // simple version with no validation or sanitation
 exports.test = (req, res) => {
