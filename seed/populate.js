@@ -5,7 +5,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=25')
   .then(myJson => {
     const pokeArray = myJson.results
     pokeArray.forEach(pokemon => {
-      postData(`http://localhost:5775/products/pokemon`, pokemon)
+      postData(`http://localhost:5775/pokemon/pokemon`, pokemon)
         .then(data => console.log(data)) 
         .catch(error => console.error(error))
     })

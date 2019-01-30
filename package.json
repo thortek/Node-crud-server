@@ -9,11 +9,13 @@
     "mongoose": "^5.4.6"
   },
   "devDependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.9"
   },
   "scripts": {
     "test": "test",
-    "start": "node app.js"
+    "start": "nodemon app.js",
+    "start-dev": "node seed/populate.js"
   },
   "repository": {
     "type": "git",

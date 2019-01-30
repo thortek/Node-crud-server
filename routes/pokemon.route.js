@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
-const product_controller = require('../controllers/product.controller')
+const pokemon_controller = require('../controllers/pokemon.controller')
 
-// router.get('/test', product_controller.test)
+router.get('/test', pokemon_controller.test)
 
 // router.post('/create', product_controller.product_create)
 
-router.post('/pokemon', product_controller.pokemon_create)
+router.post('/pokemon', pokemon_controller.pokemon_create)
 
 // router.put('/:id/update', product_controller.product_update)
 

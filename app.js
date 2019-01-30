@@ -11,6 +11,7 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const product = require('./routes/product.route')// imports routes for the products
+const pokemon = require('./routes/pokemon.route')
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 app.use('/products', product)
+app.use('/pokemon', pokemon)
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
