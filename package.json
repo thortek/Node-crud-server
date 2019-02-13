@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Simple node server example",
   "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon app.js",
+    "populate": "node seed/populate.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
@@ -11,11 +16,6 @@
   "devDependencies": {
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.9"
-  },
-  "scripts": {
-    "test": "test",
-    "start": "nodemon app.js",
-    "start-dev": "node seed/populate.js"
   },
   "repository": {
     "type": "git",
