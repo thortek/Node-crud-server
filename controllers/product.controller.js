@@ -20,20 +20,6 @@ exports.product_create = (req, res, next) => {
   })
 }
 
-exports.pokemon_create = (req, res, next) => {
-  let pokemon = new Pokemon({
-    name: req.body.name,
-    url: req.body.url,
-  })
-
-  pokemon.save(function(err) {
-    if (err) {
-      return next(err)
-    }
-    res.send('Pokemon created!')
-  })
-}
-
 exports.product_update = (req, res, next) => {
   Product.findByIdAndUpdate(
     req.params.id,

@@ -3,9 +3,9 @@ const router = express.Router()
 
 const pokemon_controller = require('../controllers/pokemon.controller')
 
-router.get('/test', pokemon_controller.test)
+router.get('/all', pokemon_controller.all)
 
-// router.post('/create', product_controller.product_create)
+router.get('/find/:name', pokemon_controller.find_one)
 
 router.post('/pokemon', pokemon_controller.pokemon_create)
 

@@ -1,8 +1,14 @@
 const Pokemon = require('../models/pokemon.model')
 
 // simple version with no validation or sanitation
-exports.test = (req, res) => {
-  res.send('Greetings from the test controller!')
+exports.all = (req, res) => {
+  Pokemon.find({})
+  .then( (allPokemon) => res.json(allPokemon))
+}
+
+exports.find_one = (req, res) => {
+  Pokemon.findOne({ name: req.params.name })
+  .then( (foundPokemon) => res.json(foundPokemon))
 }
 
 exports.pokemon_create = (req, res, next) => {
