@@ -11,6 +11,8 @@ exports.pokemon_create = (req, res, next) => {
     url: req.body.url,
     height: req.body.height,
     weight: req.body.weight,
+    id: req.body.id,
+    moves: [{ name: req.body.move.name, url: req.body.move.url}],
   })
 
   pokemon.save(function(err) {
