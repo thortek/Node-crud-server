@@ -14,6 +14,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=25')
               weight: fullPokemon.weight,
               name: fullPokemon.name,
               url: purl,
+              sprite: fullPokemon.sprites.front_shiny,
             }
           })
       .then(newOne => {

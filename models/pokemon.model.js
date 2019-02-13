@@ -7,6 +7,7 @@ const PokemonSchema = new Schema({
     url: { type: String, required: true},
     height: { type: Number, required: false},
     weight: { type: Number, required: false},
+    sprite: { type: String, required: false},
 })
 
 module.exports = mongoose.model('Pokemon', PokemonSchema)
