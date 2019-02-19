@@ -2,10 +2,10 @@
   "name": "node-crud-server",
   "version": "1.0.0",
   "description": "Simple node server example",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node app.js",
+    "start": "node index.js",
     "populate": "node seed/populate.js"
   },
   "dependencies": {
