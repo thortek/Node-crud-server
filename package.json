@@ -17,8 +17,7 @@
     "mongoose": "^5.4.6"
   },
   "devDependencies": {
-    "node-fetch": "^2.3.0",
-    "nodemon": "^1.18.9"
+    "node-fetch": "^2.3.0"
   },
   "repository": {
     "type": "git",
